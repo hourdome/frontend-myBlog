@@ -18,7 +18,7 @@ export default async function Page({ params }){
         <div className="container mx-auto">
             <div>{blog.attributes.title}</div>
             {/* <img width="500px" src={`${process.env.STRAPI_BASE_URL}${blog.attributes.image.data.attributes.url}`} /> */}
-            <div>author by: {blog.attributes.author.data.attributes.name}</div>
+            <div>author by: {blog.attributes.author.data.attributes.publisher}</div>
         </div>
     )
 }
