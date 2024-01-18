@@ -1,5 +1,5 @@
 import axios from "axios"
-const { richTextFromMarkdown } = require('@contentful/rich-text-from-markdown');
+
 
 
 const fetchBlog = async (id) =>{
