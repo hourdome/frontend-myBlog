@@ -17,15 +17,19 @@ export default async function Page() {
   const blogs = await fetchBlogs()
 
   return(
-    <div className="container mx-auto">
-      Blog Review
-      <div className="grid grid-cols-4 grid-rows-2">
+    <div className="container mx-auto py-4">
+      <div>
+        <p className="font-3xl bg-slate-500	text-white px-2 py-4">Blog Review</p>
+      </div>
+      <div>
+        <br></br>
+      </div>
+      <div className="grid grid-cols-4 grid-rows-2 gap-2">
       {
         blogs.map((blog, index) => (
-          <div className="flex flex-col" key={index}>
-            <div className="text-2xl">{blog.attributes.title}</div>
-            <div className="text-2xl">{blog.attributes.type}</div>
-            <Link href={`blog/${blog.id}`}className="bg-blue-100 p-4" >see more</Link>
+          <div className="flex flex-col border-2 border-slate-400" key={index}>
+            <div className="text-base px-2 py-4 font-bold">{blog.attributes.title}</div>
+            <Link href={`blog/${blog.id}`}className="border-4 border-slate-300 bg-slate-200 p-5 " >see more</Link>
           </div>
         ))
       }
